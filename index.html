@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine ❤️</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: pink;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .question {
+        font-size: 28px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin: 10px;
+    }
+
+    .yes {
+        background: #ff4d6d;
+        color: white;
+    }
+
+    .no {
+        background: white;
+        color: black;
+    }
+
+    .gif {
+        width: 250px;
+        margin-top: 20px;
+    }
+
+    .heart {
+        position: absolute;
+        top: -20px;
+        color: red;
+        animation: fall 4s linear infinite;
+        font-size: 20px;
+    }
+
+    @keyframes fall {
+        to {
+            transform: translateY(100vh);
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container" id="valentine">
+    <div class="question" id="message">Will you be my Valentine? ❤️</div>
+    <button class="yes" id="yesButton" onclick="acceptLove()">Yes</button>
+    <button class="no" id="noButton" onclick="rejectLove()">No</button>
+</div>
+
+<script>
+let messages = [
+    "Are you sure? 🥺",
+    "Really sure?? 😭",
+    "Think again 💔",
+    "Please? 🥹",
+    "Last chance 😢"
+];
+
+let noCount = 0;
+let messageText = document.getElementById("message");
+let noButton = document.getElementById("no
